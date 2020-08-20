@@ -5,7 +5,7 @@
 <html>
 <head>
 <title>Complaint Page</title>
- <link href="css/h2.css" rel="stylesheet">
+<link href="css/h2.css" rel="stylesheet">
 </head>
 <body>
  <font color="red">${uploadFileSuccess}</font>

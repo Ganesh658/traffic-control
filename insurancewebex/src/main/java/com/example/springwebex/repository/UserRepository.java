@@ -12,8 +12,8 @@ import com.example.springwebex.model.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{
-	@Query(value = "SELECT u FROM User u WHERE u.username = :username and u.password = :password")
-	public User validateUser(@Param("username") String username, @Param("password") String password);
+	@Query(value = "SELECT u FROM User u WHERE u.username = :username and u.password = :password and u.purpose = :purpose")
+	public User validateUser(@Param("username") String username, @Param("password") String password, @Param("purpose") String purpose);
 	
 	@Modifying
 	@Transactional

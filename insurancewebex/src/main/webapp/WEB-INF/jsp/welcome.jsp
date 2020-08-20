@@ -7,7 +7,7 @@
 <title>VALID USER</title>
 </head>
 <body>
-    Hello Mr/Ms/Miss: ${username} your a valid User .
+    Congratulations... Mr/Ms/Miss: ${username} your are an authorized insurance agent .
     <a href="./searchvehicleinfo">Click here to view Complain</a>
 </body>
 

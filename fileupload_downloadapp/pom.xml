@@ -9,9 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>fileupload_downloadapp</artifactId>
+	<artifactId>FileUploadandDownload</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>fileupload_downloadapp</name>
+	<packaging>war</packaging>
+	<name>FileUploadandDownload</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -39,12 +40,12 @@
 		</dependency>
 		
 		<!-- Web with Tomcat + Embed -->
-		<dependency>
+<!-- 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
 		</dependency>
-
+ -->
 		<!-- JSTL -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -55,16 +56,16 @@
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
-			<scope>provided</scope>
+	<!--  		<scope>provided</scope> -->
 		</dependency>
 
 		<!-- Need this to compile JSP -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.eclipse.jdt.core.compiler</groupId>
 			<artifactId>ecj</artifactId>
 			<version>4.6.1</version>
 			<scope>provided</scope>
-		</dependency>
+		</dependency> -->
 		
 		<dependency>
 			<groupId>mysql</groupId>
@@ -86,11 +87,14 @@
 
 	<build>
 		<plugins>
+		
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>Myproject</finalName>
 	</build>
+	
 
 </project>

@@ -5,7 +5,8 @@
 <head>
 </head>
 <body style="background-color: lightblue;">
-<h1  style="margin-left:400px;">Vehicle Details List</h1>  
+<h1  style="margin-left:400px;">Vehicle Details List here</h1>  
+<h2  style="margin-left:250px;">Hey agent please look vehicle and person record and do needful to our customer </h2>
 <table border="8" width="50%" cellpadding="20" style="margin-left:auto;margin-right:auto;margin-top:0px;margin-bottom:100px;">  
    <c:forEach var="vehicle" items="${databaseFile}">   
    <tr>  

@@ -28,7 +28,7 @@ public class LoginController {
 
 	@RequestMapping(value="/", method = RequestMethod.GET)
     public String showVeiwUserDetails(ModelMap model){
-		return "redirect:/getAllUserDetails"; 
+		return "login"; 
     }
 	
 	@RequestMapping(value="/login", method = RequestMethod.GET)
@@ -53,7 +53,7 @@ public class LoginController {
     public String addUserDetails(@ModelAttribute("user") User user) {
 		User newUser =  loginService.save(user);
 		if(newUser != null){
-			return "redirect:/getAllUserDetails";
+			return "redirect:/userRegistration";
 		}else{
 			return "redirect:/userRegistration";
 		}
@@ -72,11 +72,11 @@ public class LoginController {
 	  }    
 	
 	@RequestMapping(value="/verifyLoginDetails", method = RequestMethod.GET)
-    public String validateUser(ModelMap model, @RequestParam String username, @RequestParam String password){
-		System.out.println("Entering - LoginController.validateUser(ModelMap, String, String) - username : "+username+" | password : "+password);
-        boolean isValidUser = loginService.validateUser(username, password);
+    public String validateUser(ModelMap model, @RequestParam String username, @RequestParam String password, @RequestParam String purpose){
+		System.out.println("Entering - LoginController.validateUser(ModelMap, String, String, String) - username : "+username+" | password : "+password+" | purpose : "+purpose);
+        boolean isValidUser = loginService.validateUser(username, password, purpose);
         if (!isValidUser) {
-            model.put("errorMessage", "Invalid Credentials");
+            model.put("errorMessage", "You are not Recoginsed Person to proceed");
             return "login";
         }
         model.put("username", username);

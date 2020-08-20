@@ -15,10 +15,10 @@ public class LoginServiceImpl implements LoginService {
 	@Autowired
 	UserRepository userRepository;
 
-	public boolean validateUser(String username, String password) {
-		System.out.println("Entering - LoginServiceImpl.validateUser(String, String) - username : "+username+" | password : "+password);
+	public boolean validateUser(String username, String password, String purpose) {
+		System.out.println("Entering - LoginServiceImpl.validateUser(String, String, String) - username : "+username+" | password : "+password+" | purpose : "+purpose);
 		boolean validUser = false;
-		User user = userRepository.validateUser(username, password);
+		User user = userRepository.validateUser(username, password, purpose);
 		if(user != null){
 			validUser = true;
 		}

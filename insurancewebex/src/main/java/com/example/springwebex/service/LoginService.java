@@ -6,7 +6,7 @@ import com.example.springwebex.model.User;
 
 public interface LoginService {
 
-	public boolean validateUser(String username, String password);
+	public boolean validateUser(String username, String password, String purpose);
 
 	public User save(User user);
 

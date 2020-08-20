@@ -10,13 +10,16 @@ artifacts:
   secondary-artifacts:
     artifact1:
       files:
-        - fileupload_download/target/Myproject
-      name: Myproject
+        directory: 'fileupload_download'
+        base-directory: 'target/Myproject'
+        name: Myproject
     artifact2:
       files:
-        - insurance_agent/target/Myproject2
-      name: Myproject2
+        directory: 'insurance_agent'
+        base-directory: 'target/Myproject2'
+        name: Myproject2
     artifact3:
       files:
-        - springwebex/target/Myproject
-      name: Myproject3
+        directory: 'springwebex'
+        base-directory: 'target/Myproject3'
+        name: Myproject3

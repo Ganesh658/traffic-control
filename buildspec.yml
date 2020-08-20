@@ -10,7 +10,7 @@ artifacts:
   secondary-artifacts:
     artifact1:
       files:
-        directory: 'fileupload_download"
+        directory: 'fileupload_download'
         base-directory: 'target/Myproject'
         name: Myproject
     artifact2:
